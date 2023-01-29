@@ -1,0 +1,28 @@
+codigo do Nó 1
+#include <dht.h> // Biblioteca para o sensor DHT
+
+dht DHT; // Declaração do sensor DHT
+
+int Tx = 10; // Pino de transmissão serial
+int Rx = 11; // Pino de recepção serial
+
+void setup() {
+  Serial.begin(9600); // Inicialização da comunicação serial
+  pinMode(Tx, OUTPUT); // Configuração do pino de transmissão como saída
+  pinMode(Rx, INPUT); // Configuração do pino de recepção como entrada
+}
+
+void loop() {
+  int t = DHT.temperature; // Variável para armazenar a temperatura
+  int u = DHT.humidity; // Variável para armazenar a umidade
+  int l = analogRead(A0); // Variável para armazenar a luminosidade (utilizando o pino A0)
+
+  Serial.print("t:"); // Envia o identificador "t:" para o Nó 2
+  Serial.println(t); // Envia a temperatura para o Nó 2
+  Serial.print("u:"); // Envia o identificador "u:" para o Nó 2
+  Serial.println(u); // Envia a umidade para o Nó 2
+  Serial.print("l:"); // Envia o identificador "l:" para o Nó 2
+  Serial.println(l); // Envia a luminosidade para o Nó 2
+
+  delay(10000); // Aguarda 10 segundos antes de coletar novos dados
+}
