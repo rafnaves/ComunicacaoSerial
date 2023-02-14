@@ -1,4 +1,5 @@
 Codigo Nó 2
+#include <Arduino.h>
 int t, u, l; // Variáveis para armazenar os dados enviados pelo Nó 1
 bool tVermelho, uVermelho, lVermelho; // Variáveis para armazenar se os LEDs vermelhos estão ligados
 bool tAmarelo, uAmarelo, lAmarelo; // Variáveis para armazenar se os LEDs amarelos estão ligados
