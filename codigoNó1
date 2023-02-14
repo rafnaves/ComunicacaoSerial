@@ -1,4 +1,5 @@
 codigo do Nó 1
+@@GIT_ID@@
 #include <Arduino.h>
 #include <dht.h> // Biblioteca para o sensor DHT
 
